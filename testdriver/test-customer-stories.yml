@@ -1,0 +1,12 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "Customers" in the header menu.
+    commands:
+      - command: hover-text
+        text: Customers
+        description: header menu item
+        action: click
+  - prompt: Assert that customer stories or testimonials are displayed.
+    commands:
+      - command: assert
+        expect: customer stories or testimonials are displayed

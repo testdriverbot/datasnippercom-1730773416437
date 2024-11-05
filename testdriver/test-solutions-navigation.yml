@@ -1,0 +1,12 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "Solutions" in the header menu.
+    commands:
+      - command: hover-text
+        text: Solutions
+        description: header menu item
+        action: click
+  - prompt: Assert that the solutions section opens.
+    commands:
+      - command: assert
+        expect: the solutions section is visible

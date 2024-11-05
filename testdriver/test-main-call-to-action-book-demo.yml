@@ -1,0 +1,75 @@
+version: 4.0.80
+steps:
+  - prompt: Click on the "Book demo" button.
+    commands:
+      - command: hover-text
+        text: Book demo
+        description: button to book a demo
+        action: click
+  - prompt: Click on the "Book demo" button.
+    commands:
+      - command: hover-text
+        text: Book demo
+        description: button to book a demo
+        action: click
+  - prompt: Assert that a form or scheduling interface is displayed.
+    commands:
+      - command: assert
+        expect: a form with input fields is displayed
+  - prompt: Complete the booking process.
+    commands:
+      - command: hover-text
+        text: First name*
+        description: first name input field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Business e-mail*
+        description: business email input field
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Mobile phone number
+        description: mobile phone number input field
+        action: click
+      - command: type
+        text: 1234567890
+      - command: scroll-until-text
+        text: Submit
+        direction: down
+      - command: hover-text
+        text: Submit
+        description: submit button
+        action: click
+  - prompt: Complete the booking process.
+    commands:
+      - command: hover-text
+        text: Business e-mail*
+        description: email input field
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Submit
+        description: submit button
+        action: click
+  - prompt: Complete the booking process.
+    commands:
+      - command: hover-text
+        text: Business e-mail*
+        description: email input field
+        action: click
+      - command: type
+        text: backspace
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: External Audit
+        description: select option from dropdown
+        action: click
+      - command: hover-text
+        text: Submit
+        description: submit button
+        action: click

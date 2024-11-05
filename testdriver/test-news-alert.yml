@@ -1,0 +1,22 @@
+version: 4.0.80
+steps:
+  - prompt: Click the "Read more" link on the news alert banner.
+    commands:
+      - command: hover-text
+        text: Read more
+        description: link on the news alert banner
+        action: click
+  - prompt: Assert that further news details are displayed.
+    commands:
+      - command: assert
+        expect: >-
+          DataSnipper Supercharges AI-driven Audit Automation with Acquisition
+          of 'UpLink' and Launch of New Product, 'DocuMine'
+  - prompt: >-
+      Verify that the content relates to the news topic shown in the banner.  #
+      Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          UpLink has been acquired by DataSnipper, Supercharging AI-driven Audit
+          Automation

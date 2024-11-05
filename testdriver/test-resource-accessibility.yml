@@ -1,0 +1,36 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "Resources" in the header menu.
+    commands:
+      - command: hover-text
+        text: Resources
+        description: header menu item
+        action: click
+  - prompt: Click on "Resources" in the header menu.
+    commands:
+      - command: hover-text
+        text: Resources
+        description: header menu item
+        action: click
+      - command: assert
+        expect: Resources like blogs are listed
+  - prompt: >-
+      Open a resource and assert that it is downloadable or viewable.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: DataSnipper blog
+        description: resource link under Resources
+        action: click
+      - command: assert
+        expect: The DataSnipper blog is viewable or downloadable
+  - prompt: >-
+      Open a resource and assert that it is downloadable or viewable.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Meet DataSnipper Excel Online
+        description: resource title
+        action: click
+      - command: assert
+        expect: The resource is downloadable or viewable

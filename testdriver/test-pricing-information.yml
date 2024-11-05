@@ -1,0 +1,36 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "Pricing" in the header menu.
+    commands:
+      - command: hover-text
+        text: Pricing
+        description: link in the header
+        action: click
+  - prompt: Assert that pricing plans are displayed.
+    commands:
+      - command: assert
+        expect: pricing plans are displayed
+  - prompt: >-
+      Select a plan to view more details or options for purchasing.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Professional
+        description: plan for medium-sized business
+        action: click
+  - prompt: >-
+      Select a plan to view more details or options for purchasing.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Professional
+        description: plan for medium-sized business
+        action: click
+  - prompt: >-
+      Select a plan to view more details or options for purchasing.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Professional
+        description: plan for medium-sized business
+        action: click

@@ -1,0 +1,28 @@
+version: 4.0.80
+steps:
+  - prompt: Click on "Company" in the header menu.
+    commands:
+      - command: hover-text
+        text: Company
+        description: link in the header
+        action: click
+  - prompt: Click on "Company" in the header menu.
+    commands:
+      - command: hover-text
+        text: Company
+        description: link in the header
+        action: click
+      - command: wait
+        timeout: 2000
+  - prompt: Assert that company information like About Us or Careers is available.
+    commands:
+      - command: assert
+        expect: company information like About Us or Careers is available
+  - prompt: >-
+      Verify that team or job listings can be viewed if applicable.  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Careers
+        description: link in the Company dropdown
+        action: click
